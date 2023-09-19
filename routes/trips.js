@@ -36,17 +36,21 @@ router.post('/search', function(req, res, next) {
 
                     resultTrips.push(obj);
                     resultTrips[0].Message = 'Trips found';
-                    console.log(resultTrips[(resultTrips.length-1)]) 
-                    console.log(moment(newDate).format('LT'));
-                    console.log('-------------------------')
-
                 } 
 
             }
 
         }
-    
-        res.json(resultTrips);
+        if (true) {
+
+            for (let i = 1; i < resultTrips.length; i++) {
+
+                resultTrips[i].timetrip = '10:23';
+
+            }
+
+            res.json(resultTrips);
+        }
 
     });
     
