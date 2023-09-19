@@ -41,7 +41,6 @@ router.post('/search', function(req, res, next) {
             }
 
         }
-        if (true) {
 
             for (let i = 1; i < resultTrips.length; i++) {
 
@@ -50,7 +49,6 @@ router.post('/search', function(req, res, next) {
             }
 
             res.json(resultTrips);
-        }
 
     });
     
