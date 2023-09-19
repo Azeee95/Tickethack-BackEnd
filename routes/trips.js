@@ -35,7 +35,6 @@ router.post('/search', function(req, res, next) {
                 if (moment(dateTrip).format('L') == moment(newDate).format('L')) {
 
                     resultTrips.push(obj);
-                    resultTrips[resultTrips.length-1].hour = moment(newDate).format('LT')
                     resultTrips[0].Message = 'Trips found';
 
                 } 
