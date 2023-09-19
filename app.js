@@ -9,6 +9,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tripsRouter = require('./routes/trips')
 
+const backendURL = 'https://tickethack-back-end.vercel.app/'
+const frontendURL = 'https://tickethack-front-end.vercel.app/'
+
 var app = express();
 const cors = require('cors');
 app.use(cors());
