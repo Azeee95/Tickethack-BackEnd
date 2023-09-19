@@ -36,7 +36,9 @@ router.post('/search', function(req, res, next) {
 
                     resultTrips.push(obj);
                     resultTrips[0].Message = 'Trips found';
-                    resultTrips[(resultTrips.length-1)].timehour = moment(newDate).format('LT');
+                    console.log(resultTrips[(resultTrips.length-1)]) 
+                    console.log(moment(newDate).format('LT'));
+                    console.log('-------------------------')
 
                 } 
 
