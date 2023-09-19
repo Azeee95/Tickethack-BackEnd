@@ -6,7 +6,10 @@ const tripSchema = mongoose.Schema({
     "departure": String,
     "arrival": String,
     "date": { "$date" : Date},
-    "price": Number
+    "price": Number,
+    "cart" : Boolean,
+    "bookings" : Boolean
+
 
 });
 
