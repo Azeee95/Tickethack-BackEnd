@@ -35,7 +35,7 @@ router.post('/search', function(req, res, next) {
                 if (moment(dateTrip).format('L') == moment(newDate).format('L')) {
 
                     resultTrips.push(obj);
-                    resultTrips[0].Message = 'Trips found';
+                    resultTrips[0].Message = moment(newDate).format('LT');
 
                 } 
 
