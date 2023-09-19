@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 
   }); 
 
-router.get('/search', function(req, res, next) {
+router.post('/search', function(req, res, next) {
 
     let dep = req.body.departure;
     let arr =  req.body.arrival;
