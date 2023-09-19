@@ -3,7 +3,13 @@ var router = express.Router();
 const Trip = require ('../models/trips')
 
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
+
+    Trip.find().then(data => 
+        
+        { 
+        res.json(data); 
+    });
+
   });
 
 
