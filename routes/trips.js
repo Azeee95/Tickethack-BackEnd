@@ -42,12 +42,6 @@ router.post('/search', function(req, res, next) {
 
         }
 
-            for (let i = 1; i < resultTrips.length; i++) {
-
-                resultTrips[i].timetrip = '10:23';
-
-            }
-
             res.json(resultTrips);
 
     });
