@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body id="bodyempty">
+
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom, header">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <span class="fs-4 tickethack">Tickethack</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          
+          <li class="nav-item"><a href="./cart.html" class="nav-link cartbooking">Cart</a></li>
+          <li class="nav-item"><a href="./bookings.html" class="nav-link cartbooking">Bookings</a></li>
+        </ul>
+      </header>
+
+
+       <div>
+      
+            <div class="center-div">
+               <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary, cartsize">
+                <div class="containerzone">
+                    <nav aria-label="breadcrumb" >
+                        
+                      <ol class="breadcrumb breadcrumb-chevron p-3 --bs-primary-text-emphasis rounded-3">
+                        
+                          <li>
+                              <a class="link-body-emphasis text-decoration-none">${data[i].departure}</a>
+                          </li>
+                  
+                        <li>
+                  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                  
+                          <a class="link-body-emphasis text-decoration-none">${data[i].arrival}</a>
+                        </li>
+                        
+                        <li>
+                  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                  
+                          <a class="link-body-emphasis text-decoration-none"> ${(data[i].date).substr(11, 5)} </a>
+                          
+                        </li>
+                  
+                        <li>
+                  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                  
+                          <a class="link-body-emphasis text-decoration-none">${data[i].price} € </a>
+                          
+                        </li>
+                  
+                  
+                        <li class="breadcrumb-item active" aria-current="page">
+                  
+                          <button type="button" class="btn btn-success" style = 'margin-left: 10rem;'>X</button>
+                        
+                      </li>
+                  
+                      </ol>
+                    </nav>
+                  </div>
+
+                  
+                
+                  <!-- <p class="inside" align="center"> No tickets in your cart.<br><br> Why not plan a trip ? </p> -->
+          
+               </form>
+               <form class="p-4 p-md-2 border rounded-3 bg-body-tertiary, total">
+
+                <div style="color: white;">Total : Price €</div>
+                <div>
+                    <button class="btn btn-lg btn-success" id="book" href="./bookings.html">Purchase</button>
+                </div>
+               </form>
+            </div>
+            
+
+       </div>   
+         
+     
+
+
+
+    <script src="./script.js"> </script>
+</body>
+</html>

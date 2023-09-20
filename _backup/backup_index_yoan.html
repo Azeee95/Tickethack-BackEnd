@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body id="body">
+
+
+<!-- 
+HEADER
+------------------------------------------------------------------------------------------------------------------------> 
+    
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom, header">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <span class="fs-4 tickethack">Tickethack</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          
+          <li class="nav-item"><a href="./cart.html" class="nav-link cartbooking">Cart</a></li>
+          <li class="nav-item"><a href="./bookings.html" class="nav-link cartbooking">Bookings</a></li>
+        </ul>
+      </header>
+
+<!-- 
+TITRE
+------------------------------------------------------------------------------------------------------------------------> 
+
+     <div class ="titre">
+
+       <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Explore the world effortlessly by train! </h1>
+          <p class="lead text-body-secondary ">Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</p>
+          
+        </div>
+      </div>
+
+
+<!-- 
+partie droite avec les infos depart, arrivé et calendrier
+------------------------------------------------------------------------------------------------------------------------> 
+
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5 containerzone">
+        <div class="row align-items-center g-lg-5 py-5 ">
+          
+          <div class="col-md-10 mx-auto col-lg-5 containerzone">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="departure" placeholder="Departure">
+                <label for="floatingInput">Departure</label>
+              </div>
+              
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="arrival" placeholder="Arrival">
+                <label for="floatingPassword">Arrival</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="date" class="form-control" id="date" placeholder="date">
+              </div>
+
+              <button class="w-100 btn btn-lg btn-success" type="submit" id="search">Search</button>
+              
+              
+            </form>
+          </div>
+
+          <!-- 
+partie gauche avec par defaut un train
+------------------------------------------------------------------------------------------------------------------------> 
+
+          <div class="col-md-10 mx-auto col-lg-5 containerzone">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                 <div>
+                  <img src="images/train.png" class="center-train">
+                  <br>
+                  <br>
+                 
+               
+                 </div>
+                 <hr class="my-4 line">
+                 <p class="textp">it's time to book for future trip.</p>
+            </form>
+          </div>
+
+          <div class="col-md-10 mx-auto col-lg-5 containerzone">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                 <div>
+                  <img src="images/notfound.png" class="center-train">
+                  <br>
+                  <br>
+                 
+               
+                 </div>
+                 <hr class="my-4 line">
+                 <p class="textp">No trip found</p>
+            </form>
+          </div>
+
+
+          
+
+<!-- 
+setup resultat de recherche
+------------------------------------------------------------------------------------------------------------------------>            
+           
+            <div id="flex-container2" class=" containerzone ">
+            
+              
+                  
+                    <div class="item">Departure</div>
+                    <div class="item">Arrival</div>
+                    <div class="item">Hours</div>
+                    <div class="item">Price</div>
+                    <button class="w-100 btn btn-lg btn-success" type="submit" id="book">Book</button>
+                 
+                 
+            </div>
+<!-- 
+setup resultat de recherche 2
+------------------------------------------------------------------------------------------------------------------------>    
+           <div>
+            <nav  aria-label="breadcrumb" >
+                
+              <ol class="breadcrumb breadcrumb-chevron p-3 bg-primary-subtle border border-primary-subtle rounded-3">
+                
+                  <li>
+                      <a class="link-body-emphasis text-decoration-none">${data[i].departure}</a>
+                  </li>
+          
+                <li>
+          
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+          
+                  <a class="link-body-emphasis text-decoration-none">${data[i].arrival}</a>
+                </li>
+                
+                <li>
+          
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+          
+                  <a class="link-body-emphasis text-decoration-none"> ${(data[i].date).substr(11, 5)} </a>
+                  
+                </li>
+          
+                <li>
+          
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+          
+                  <a class="link-body-emphasis text-decoration-none">${data[i].price} € </a>
+                  
+                </li>
+          
+          
+                <li class="breadcrumb-item active" aria-current="page">
+          
+                  <button type="button" class="btn btn-success" style = 'margin-left: 40px;'>Book</button>
+                
+              </li>
+          
+              </ol>
+            </nav>
+          </div>
+            
+<!-- 
+test avec ajout des resultats dans le container + scrollbar 
+------------------------------------------------------------------------------------------------------------------------>
+            
+            <div class="col-md-10 mx-auto col-lg-5 containerzone"> 
+              
+              <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary scrollable-div">
+                <div>
+                  <nav aria-label="breadcrumb" >
+                      
+                    <ol class="breadcrumb breadcrumb-chevron p-3 bg-primary-subtle border border-primary-subtle rounded-3">
+                      
+                        <li>
+                            <a class="link-body-emphasis text-decoration-none">${data[i].departure}</a>
+                        </li>
+                
+                      <li>
+                
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                
+                        <a class="link-body-emphasis text-decoration-none">${data[i].arrival}</a>
+                      </li>
+                      
+                      <li>
+                
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                
+                        <a class="link-body-emphasis text-decoration-none"> ${(data[i].date).substr(11, 5)} </a>
+                        
+                      </li>
+                
+                      <li>
+                
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                
+                        <a class="link-body-emphasis text-decoration-none">${data[i].price} € </a>
+                        
+                      </li>
+                
+                
+                      <li class="breadcrumb-item active" aria-current="page">
+                
+                        <button type="button" class="btn btn-success" style = 'margin-left: 40px;'>Book</button>
+                      
+                    </li>
+                
+                    </ol>
+                  </nav>
+                </div>
+                
+              </form>
+              
+            </div>
+
+  
+<!-- 
+
+------------------------------------------------------------------------------------------------------------------------>          
+
+
+    <script src="./script.js"> </script>
+</body>
+</html>

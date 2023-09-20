@@ -1,0 +1,160 @@
+/* INDEX.HTML*/
+
+.tickethack {
+    color: #167347 ;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.cartbooking {
+   color: black;
+   align-items: baseline;
+   margin-top: 10px;
+   
+}
+
+
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Répartit les éléments horizontalement avec un espace égal entre eux */
+    align-items: baseline; /* Centre les éléments verticalement */
+    background-color: #f0f0f0; /* Arrière-plan du conteneur */
+    width: 100%;
+}
+/*essai sans la balise <form>*/
+#flex-container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline; /* Centre les éléments verticalement */
+    background-color: #f0f0f0; /* Arrière-plan du conteneur */
+    /*width: 100%;*/
+    width: 300px;
+    
+    border-radius: 7px 7px 7px 7px;
+}
+
+
+
+
+.item {
+    
+    margin-right: 3px; /* Add margin to create space between items */
+}
+
+
+
+/* Style for the scrollable div */
+.scrollable-div {
+     
+    height: 350px; /* Set the height of the div */
+    overflow:scroll; /* Add a scrollbar when content overflows the div */
+    
+}
+
+
+.header {
+    background-color: aliceblue;
+    border: 2px solid red;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+.titre {
+    border: 2px solid  blue;
+    text-align: center;
+}
+
+.textp {
+    text-align: center;
+}
+
+.containerzone {
+    
+    border: 2px solid red;
+
+}
+
+    /* Styles pour l'arrière-plan de la main page */
+#body {
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le rembourrage par défaut */
+    background-image: url('images/background.jpg'); /* Image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir la fenêtre */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image pour qu'elle reste en arrière-plan lors du défilement */
+}
+     /* Styles pour l'arrière-plan des pages vide cart et bookings */
+#bodyempty{
+    background-color: #F3F3F4;
+    
+}
+
+.center-train {
+    
+    display: flex; /* Utilisation de Flexbox pour centrer verticalement et horizontalement */
+    margin-left: 60px;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 137px; /* Ajustez la hauteur de la div selon vos besoins */
+    width: 137px;
+    /* border: 1px solid #ccc; Optionnel : ajoutez une bordure pour mieux voir la div */
+}
+
+
+.line {
+    color: #167347 ;
+}
+
+/* taille du bloc container gauche */
+
+/* .resultat {
+
+    min-width: 25%;
+    min-height: 10%;
+} */
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/* CART.HTML */
+/* bloc et police centré */
+.center-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.cartsize {
+    
+    min-width: 1000px;
+    min-height: 20%;
+}
+
+.cartsize2 {
+    display: flex;
+    min-width: 1000px;
+    
+    
+}
+
+.total {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: #001648;
+}
+
+.invisible {
+    display : none
+}
+
+
