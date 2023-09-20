@@ -1,0 +1,116 @@
+/* INDEX.HTML*/
+
+
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Répartit les éléments horizontalement avec un espace égal entre eux */
+    align-items: center; /* Centre les éléments verticalement */
+    background-color: #f0f0f0; /* Arrière-plan du conteneur */
+    padding: 10px; /* Ajoute un peu d'espace autour des éléments */
+}
+
+
+
+.header {
+    background-color: aliceblue;
+    border: 2px solid red;
+}
+
+h1 {
+    text-align: center;
+}
+
+.title {
+    height: 10px;
+}
+
+.ptitle {
+    border: 2px solid  blue;
+    text-align: center;
+}
+
+.textp {
+    text-align: center;
+}
+
+.containerzone {
+    border: 2px solid red;
+
+}
+
+    /* Styles pour l'arrière-plan de la main page */
+#body {
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le rembourrage par défaut */
+    background-image: url('images/background.jpg'); /* Image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir la fenêtre */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image pour qu'elle reste en arrière-plan lors du défilement */
+}
+     /* Styles pour l'arrière-plan des pages vide cart et bookings */
+#bodyempty{
+    background-color: #F3F3F4;
+     
+}
+
+.center-train {
+    
+    display: flex; /* Utilisation de Flexbox pour centrer verticalement et horizontalement */
+    margin-left: 60px;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 137px; /* Ajustez la hauteur de la div selon vos besoins */
+    width: 137px;
+    /* border: 1px solid #ccc; Optionnel : ajoutez une bordure pour mieux voir la div */
+}
+
+/* taille des bloc container droite*/
+.cartzone {
+  
+    min-width: 400px;
+    min-height: 343px;
+
+}
+
+/* taille du bloc container gauche */
+
+/* .resultat {
+
+    min-width: 25%;
+    min-height: 10%;
+} */
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/* CART.HTML */
+/* bloc et police centré */
+.center-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cartzone {
+    min-width: 1000px;
+    min-height: 200px;
+}
+
+.invisible {
+    display : none
+}
+
+
+.cartsize {
+
+    height: 300px;
+    width: 400px;
+}
+
+#resultcart {
+
+    overflow-y: scroll
+}
