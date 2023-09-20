@@ -59,6 +59,8 @@ router.post('/search', function(req, res, next) {
         { cart: true }
        );
 
+       res.json('Trip added to Cart');
+
   })
 
 // Suppression du panier
@@ -71,6 +73,8 @@ router.post('/deletecart', function(req, res, next) {
         { _id : id},
         { cart: false }
        );
+
+       res.json('Trip deleted from Cart');
 
   })
 
@@ -85,9 +89,10 @@ router.post('/deletecart', function(req, res, next) {
         { bookings: true }
        );
 
+       res.json('Trip added to Bookings');
   })
   
-  
+
   router.get('/cart', function(req, res, next) {
 
     Trip.find({cart : true}).then(data => 
