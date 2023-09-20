@@ -22,7 +22,7 @@ router.post('/search', function(req, res, next) {
     let dateTrip = new Date(dateParam)
     let resultTrips = [{Message : 'No trip found'}]
 
-    Trip.find({departure : dep, arrival: arr}).then(searchdata => 
+    Trip.find({departure : {$regex: new RegExp(dep, 'i')}, arrival: {$regex: new RegExp(arr, 'i')}}).then(searchdata => 
             
         {
 
