@@ -48,31 +48,46 @@ router.post('/search', function(req, res, next) {
     
   });
 
-  router.post('/updatecart', function(req, res, next) {
+  // Ajout au panier
 
-    let dep = req.body.departure;
-    let arr =  req.body.arrival;
-    let dateParam = req.body.date;
+  router.post('/addcart', function(req, res, next) {
 
-    let dateTrip = new Date(dateParam)
+    let id = req.body._id;
 
     Trip.updateOne(
-        { departure : dep, arrival : arr},
-        { bookings: false }
-       ).then(() => {
-        
-        Trip.find().then(data => {
-          console.log(data);
-        });
-       
-       });
-
-
-
+        { _id : id},
+        { cart: true }
+       );
 
   })
 
+// Suppression du panier
 
+router.post('/deletecart', function(req, res, next) {
+
+    let id = req.body._id;
+
+    Trip.updateOne(
+        { _id : id},
+        { cart: false }
+       );
+
+  })
+
+  // Ajout au Bookings
+
+  router.post('/addbookings', function(req, res, next) {
+
+    let id = req.body._id;
+
+    Trip.updateOne(
+        { _id : id},
+        { bookings: true }
+       );
+
+  })
+  
+  
   router.get('/cart', function(req, res, next) {
 
     Trip.find({cart : true}).then(data => 
