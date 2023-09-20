@@ -57,9 +57,13 @@ router.post('/search', function(req, res, next) {
     Trip.updateOne(
         { _id : id},
         { cart: true }
-       );
+       ).then (() => {
 
-       res.json('Trip added to Cart');
+        res.json('Trip added to Cart');
+
+       });
+
+
 
   })
 
@@ -72,9 +76,12 @@ router.post('/deletecart', function(req, res, next) {
     Trip.updateOne(
         { _id : id},
         { cart: false }
-       );
+       ).then (() => {
 
-       res.json('Trip deleted from Cart');
+        res.json('Trip deleted from Cart');
+
+       });
+
 
   })
 
@@ -87,9 +94,13 @@ router.post('/deletecart', function(req, res, next) {
     Trip.updateOne(
         { _id : id},
         { bookings: true }
-       );
+       ).then (() => {
 
-       res.json('Trip added to Bookings');
+        res.json('Trip added to Bookings');
+
+       });;
+
+
   })
   
 
